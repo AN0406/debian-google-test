@@ -1,0 +1,14 @@
+services:
+  debian-google-test:
+    build:
+      context: .
+      args:
+        USER_NAME: $USER_NAME
+        GROUP_NAME: $GROUP_NAME
+        GID: $GID
+        UID: $UID
+    container_name: debian-google-test
+    tty: true               # 仮想端末を維持
+    stdin_open: true        # docker exec に必要
+    volumes:
+      - ./user:/home/$USER_NAME
