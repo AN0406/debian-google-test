@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     git \
     cmake \
     build-essential \
+    wget \
     lcov
 
 ARG USER_NAME
